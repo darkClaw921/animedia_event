@@ -99,7 +99,7 @@ async def help_handler(msg: Message, state: FSMContext):
 
 @router.message(Command("add"))
 async def help_handler(msg: Message, state: FSMContext):
-    url=msg.text
+    url=msg.text.split(' ')[1]
     userID=msg.from_user.id
     sqliteWork.add_link(user_id=userID,url=url)
     await msg.answer('Добавлено')
