@@ -119,7 +119,7 @@ def check_time_exit_serial(date:datetime):
     hour1=3600
     hour4=4*3600
     hour22=22*3600
-    if date1.days>=7 and date1.seconds >= hour22:
+    if date1.days>=6 and date1.seconds >= hour22:
         print(date-datetime.now())
         print('Сериал уже вышел')
         return True
